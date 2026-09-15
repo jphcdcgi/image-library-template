@@ -19,7 +19,7 @@ export function Sidebar({
       <div className="sidebar-top">
         <a className="logo" href="#">
           <span className="logo-mark">𝕏</span>
-          <span>imagine</span>
+          <span>Your Library</span>
         </a>
         <button
           className="sidebar-collapse"

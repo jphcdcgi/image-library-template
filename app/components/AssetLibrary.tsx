@@ -47,6 +47,11 @@ export default function AssetLibrary() {
 
   return (
     <div className={`app-shell ${collapsed ? "sidebar-collapsed" : ""}`}>
+      {toast && (
+        <div className="toast" role="status">
+          {toast}
+        </div>
+      )}
       <Sidebar
         assets={assets}
         category={category}
@@ -210,11 +215,6 @@ export default function AssetLibrary() {
           <span className="mono">IMAGINE LIBRARY · v1.0</span>
         </footer>
       </main>
-      {toast && (
-        <div className="toast" role="status">
-          {toast}
-        </div>
-      )}
     </div>
   );
 }
