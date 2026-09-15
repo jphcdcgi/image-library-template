@@ -1,0 +1,122 @@
+[
+  {
+    "id": "neon-after-rain",
+    "title": "Neon after rain",
+    "category": "Cyberpunk",
+    "type": "image",
+    "model": "Grok Imagine · 2 min ago",
+    "prompt": "a lone figure under neon rain, tokyo midnight",
+    "src": "/assets/neon-after-rain.svg",
+    "alt": "Abstract neon city lights reflected in rain"
+  },
+  {
+    "id": "quiet-geometry",
+    "title": "Quiet geometry",
+    "category": "Architecture",
+    "type": "image",
+    "model": "Grok Imagine · 18 min ago",
+    "prompt": "brutalist museum in soft morning fog",
+    "src": "/assets/quiet-geometry.svg",
+    "alt": "Brutalist geometric architecture in fog"
+  },
+  {
+    "id": "tide-memory",
+    "title": "Tide memory",
+    "category": "Landscapes",
+    "type": "image",
+    "model": "Grok Imagine · 32 min ago",
+    "prompt": "long exposure ocean, silver horizon, no people",
+    "src": "/assets/tide-memory.svg",
+    "alt": "Long exposure ocean beneath a silver horizon"
+  },
+  {
+    "id": "soft-system",
+    "title": "Soft system",
+    "category": "Abstract",
+    "type": "image",
+    "model": "Grok Imagine · 1 hr ago",
+    "prompt": "liquid chrome ribbons folding through shadow",
+    "src": "/assets/soft-system.svg",
+    "alt": "Liquid chrome ribbons folding through shadow"
+  },
+  {
+    "id": "asteria",
+    "title": "Asteria",
+    "category": "Space",
+    "type": "video",
+    "model": "Grok Imagine · 2 hrs ago",
+    "prompt": "a blue planet rising over an alien desert",
+    "src": "/assets/asteria.svg",
+    "alt": "Blue planet rising over an alien desert"
+  },
+  {
+    "id": "golden-hour-study",
+    "title": "Golden hour study",
+    "category": "Portraits",
+    "type": "image",
+    "model": "Grok Imagine · 3 hrs ago",
+    "prompt": "editorial portrait, golden hour, wind in linen",
+    "src": "/assets/golden-hour-study.svg",
+    "alt": "Editorial portrait silhouette in golden light"
+  },
+  {
+    "id": "rainforest-signal",
+    "title": "Rainforest signal",
+    "category": "Nature",
+    "type": "image",
+    "model": "Grok Imagine · 5 hrs ago",
+    "prompt": "ancient fern forest, bioluminescent spores, macro",
+    "src": "/assets/rainforest-signal.svg",
+    "alt": "Bioluminescent fern forest"
+  },
+  {
+    "id": "the-observer",
+    "title": "The observer",
+    "category": "Animals",
+    "type": "image",
+    "model": "Grok Imagine · 7 hrs ago",
+    "prompt": "snow leopard watching the first light, cinematic",
+    "src": "/assets/the-observer.svg",
+    "alt": "Snow leopard watching the first light"
+  },
+  {
+    "id": "nocturne-city",
+    "title": "Nocturne city",
+    "category": "Architecture",
+    "type": "video",
+    "model": "Grok Imagine · 8 hrs ago",
+    "prompt": "slow aerial drift above a city of glass and light",
+    "src": "/assets/nocturne-city.svg",
+    "alt": "Aerial view of a glass city at night"
+  },
+  {
+    "id": "solaris-field",
+    "title": "Solaris field",
+    "category": "Landscapes",
+    "type": "image",
+    "model": "Grok Imagine · 11 hrs ago",
+    "prompt": "misty valley under a single low sun, analog grain",
+    "src": "/assets/solaris-field.svg",
+    "alt": "Misty valley beneath a low sun"
+  },
+  {
+    "id": "blue-hour-bloom",
+    "title": "Blue hour bloom",
+    "category": "Nature",
+    "type": "image",
+    "model": "Grok Imagine · Yesterday",
+    "prompt": "a flower made of glass, blue hour, studio light",
+    "src": "/assets/blue-hour-bloom.svg",
+    "alt": "A glass flower in blue hour light"
+  },
+  {
+    "id": "echo-chamber",
+    "title": "Echo chamber",
+    "category": "Abstract",
+    "type": "image",
+    "model": "Grok Imagine · Yesterday",
+    "prompt": "monochrome smoke sculpture in a white room",
+    "src": "/assets/echo-chamber.svg",
+    "alt": "Monochrome smoke sculpture"
+  }
+]
