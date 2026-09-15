@@ -1,4 +1,4 @@
-# Project: Build a Grok Imagine asset library
+# Grok Imagine inspired library template
 
 ### Generation prompt using Vercel V0:
 
