@@ -1,19 +1,19 @@
 'use client';
 
-import { SidebarTypes } from '../types';
-import Icon from './Icon';
+import type { SidebarProps } from '../types';
 import { categoryIcons, categoryNames } from '../lib/shared';
+import Icon from './Icon';
 
 export function Sidebar({
   assets,
   category,
   collapsed,
   countFor,
-  favorites,
+  faves,
   setCategoryAndScroll,
   setCollapsed,
   setToast
-}: SidebarTypes) {
+}: SidebarProps) {
   return (
     <aside
       className="sidebar"
@@ -65,7 +65,7 @@ export function Sidebar({
         >
           <span className="nav-symbol">✦</span>
           <span>Favorites</span>
-          <span className="nav-count">{favorites.length}</span>
+          <span className="nav-count">{faves.length}</span>
         </a>
       </nav>
       <div className="side-rule" />

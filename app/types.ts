@@ -1,20 +1,35 @@
-export type Asset = {
-  id: string;
-  title: string;
+export type AssetProps = {
+  alt: string;
   category: string;
-  type: 'image' | 'video';
+  id: string;
   model: string;
   prompt: string;
   src: string;
-  alt: string;
+  title: string;
+  type: 'image' | 'video';
 };
 
-export type SidebarTypes = {
-  assets: Asset[];
+export type GalleryProps = {
+  faves: any[];
+  filtered: AssetProps[];
+  setFaves: (input: any[]) => void;
+  setToast: (message: string) => void;
+};
+
+export type ToolbarProps = {
+  filtered: any[];
+  query: string;
+  setQuery: (val: string) => void;
+  setSortOldest: (val: boolean) => void;
+  sortOldest: boolean;
+};
+
+export type SidebarProps = {
+  assets: AssetProps[];
   category: string;
   collapsed: boolean;
   countFor: (name: string) => number;
-  favorites: string[];
+  faves: any[];
   setCategoryAndScroll: (val: string) => void;
   setCollapsed: (bool: boolean) => void;
   setToast: (val: string) => void;

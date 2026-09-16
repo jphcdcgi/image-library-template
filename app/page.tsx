@@ -1,5 +1,5 @@
-import AssetLibrary from './components/AssetLibrary';
+import App from './components/App';
 
 export default function Page() {
-  return <AssetLibrary />;
+  return <App />;
 }
