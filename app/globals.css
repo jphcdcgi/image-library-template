@@ -6,9 +6,9 @@
   --line-soft: #1b1e23;
   --text: #f1f2f3;
   --muted: #898d96;
-  --mono: "Geist Mono", "DM Mono", ui-monospace, monospace;
+  --mono: 'Geist Mono', 'DM Mono', ui-monospace, monospace;
   --sans:
-    "Geist", "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    'Geist', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     sans-serif;
 }
 * {

@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { SidebarTypes } from "../types";
-import Icon from "./Icon";
-import { categoryIcons, categoryNames } from "../lib/shared";
+import { SidebarTypes } from '../types';
+import Icon from './Icon';
+import { categoryIcons, categoryNames } from '../lib/shared';
 
 export function Sidebar({
   assets,
@@ -12,12 +12,18 @@ export function Sidebar({
   favorites,
   setCategoryAndScroll,
   setCollapsed,
-  setToast,
+  setToast
 }: SidebarTypes) {
   return (
-    <aside className="sidebar" aria-label="Library navigation">
+    <aside
+      className="sidebar"
+      aria-label="Library navigation"
+    >
       <div className="sidebar-top">
-        <a className="logo" href="#">
+        <a
+          className="logo"
+          href="#"
+        >
           <span className="logo-mark">𝕏</span>
           <span>Your Library</span>
         </a>
@@ -31,14 +37,20 @@ export function Sidebar({
       </div>
       <button
         className="create-button"
-        onClick={() => setToast("Creation studio is ready for your next idea")}
+        onClick={() => setToast('Creation studio is ready for your next idea')}
       >
         <span className="create-plus">+</span>
         <span>New creation</span>
         <kbd>⌘ K</kbd>
       </button>
-      <nav className="main-nav" aria-label="Primary">
-        <a href="#" className="nav-link active">
+      <nav
+        className="main-nav"
+        aria-label="Primary"
+      >
+        <a
+          href="#"
+          className="nav-link active"
+        >
           <Icon name="grid" />
           <span>All creations</span>
           <span className="nav-count">{assets.length || 48}</span>
@@ -48,7 +60,7 @@ export function Sidebar({
           className="nav-link"
           onClick={(event) => {
             event.preventDefault();
-            setToast("Favorites are coming into focus soon");
+            setToast('Favorites are coming into focus soon');
           }}
         >
           <span className="nav-symbol">✦</span>
@@ -60,16 +72,19 @@ export function Sidebar({
       <div className="section-label">
         <span>Collections</span>
         <button
-          onClick={() => setToast("Create a collection from your library")}
+          onClick={() => setToast('Create a collection from your library')}
         >
           +
         </button>
       </div>
-      <nav className="category-nav" aria-label="Filter by category">
+      <nav
+        className="category-nav"
+        aria-label="Filter by category"
+      >
         {categoryNames.map((name, index) => (
           <button
             key={name}
-            className={`category-link ${category === name ? "selected" : ""}`}
+            className={`category-link ${category === name ? 'selected' : ''}`}
             onClick={() => setCategoryAndScroll(name)}
           >
             <span className="category-symbol">

@@ -2,7 +2,7 @@ export type Asset = {
   id: string;
   title: string;
   category: string;
-  type: "image" | "video";
+  type: 'image' | 'video';
   model: string;
   prompt: string;
   src: string;

@@ -1,0 +1,11 @@
+# Ignore all non src files
+tsconfig.json
+**/*.html
+**/*.md
+**/*.mjs
+**/*.prisma
+**/*.sql
+**/*.spec
+**/*.svg
+**/*.toml
+**/*.yml
