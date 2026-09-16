@@ -1,29 +1,29 @@
-"use client";
+'use client';
 
-import { useEffect, useMemo, useState } from "react";
-import { Asset } from "../types";
-import { categoryNames } from "../lib/shared";
-import Icon from "./Icon";
-import { Sidebar } from "./Sidebar";
+import { useEffect, useMemo, useState } from 'react';
+import { Asset } from '../types';
+import { categoryNames } from '../lib/shared';
+import Icon from './Icon';
+import { Sidebar } from './Sidebar';
 
 export default function AssetLibrary() {
   const [assets, setAssets] = useState<Asset[]>([]);
   const [collapsed, setCollapsed] = useState(false);
-  const [category, setCategory] = useState("All creations");
+  const [category, setCategory] = useState('All creations');
   const [favorites, setFavorites] = useState<string[]>([]);
   const [sortOldest, setSortOldest] = useState(false);
-  const [toast, setToast] = useState("");
-  const [query, setQuery] = useState("");
+  const [toast, setToast] = useState('');
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
-    fetch("/assets.json")
+    fetch('/assets.json')
       .then((response) => response.json())
       .then(setAssets)
-      .catch(() => setToast("Could not load assets.json"));
+      .catch(() => setToast('Could not load assets.json'));
   }, []);
   useEffect(() => {
     if (!toast) return;
-    const timeout = window.setTimeout(() => setToast(""), 2200);
+    const timeout = window.setTimeout(() => setToast(''), 2200);
     return () => window.clearTimeout(timeout);
   }, [toast]);
 
@@ -31,7 +31,7 @@ export default function AssetLibrary() {
     const normalized = query.trim().toLowerCase();
     const result = assets.filter((asset) => {
       const matchesCategory =
-        category === "All creations" || asset.category === category;
+        category === 'All creations' || asset.category === category;
       const haystack =
         `${asset.title} ${asset.prompt} ${asset.model} ${asset.category}`.toLowerCase();
       return matchesCategory && (!normalized || haystack.includes(normalized));
@@ -41,14 +41,17 @@ export default function AssetLibrary() {
 
   const setCategoryAndScroll = (next: string) => setCategory(next);
   const countFor = (name: string) =>
-    name === "All creations"
+    name === 'All creations'
       ? assets.length || 48
       : assets.filter((asset) => asset.category === name).length;
 
   return (
-    <div className={`app-shell ${collapsed ? "sidebar-collapsed" : ""}`}>
+    <div className={`app-shell ${collapsed ? 'sidebar-collapsed' : ''}`}>
       {toast && (
-        <div className="toast" role="status">
+        <div
+          className="toast"
+          role="status"
+        >
           {toast}
         </div>
       )}
@@ -74,11 +77,17 @@ export default function AssetLibrary() {
             <strong>{category}</strong>
           </div>
           <div className="topbar-actions">
-            <button className="top-icon" aria-label="Notifications">
+            <button
+              className="top-icon"
+              aria-label="Notifications"
+            >
               <Icon name="bell" />
               <i className="notification-dot" />
             </button>
-            <button className="top-avatar" aria-label="Open profile">
+            <button
+              className="top-avatar"
+              aria-label="Open profile"
+            >
               JP
             </button>
           </div>
@@ -92,16 +101,22 @@ export default function AssetLibrary() {
               </h1>
               <p>Every image starts with a thought.</p>
             </div>
-            <button className="view-toggle" aria-label="Gallery view">
+            <button
+              className="view-toggle"
+              aria-label="Gallery view"
+            >
               <Icon name="grid" />
               <span>Gallery</span>
             </button>
           </div>
-          <div className="mobile-categories" aria-label="Categories">
+          <div
+            className="mobile-categories"
+            aria-label="Categories"
+          >
             {categoryNames.map((name) => (
               <button
                 key={name}
-                className={`mobile-chip ${category === name ? "selected" : ""}`}
+                className={`mobile-chip ${category === name ? 'selected' : ''}`}
                 onClick={() => setCategoryAndScroll(name)}
               >
                 {name}
@@ -122,14 +137,14 @@ export default function AssetLibrary() {
             </label>
             <div className="toolbar-right">
               <span className="result-count">
-                {filtered.length}{" "}
-                {filtered.length === 1 ? "creation" : "creations"}
+                {filtered.length}{' '}
+                {filtered.length === 1 ? 'creation' : 'creations'}
               </span>
               <button
                 className="sort-button"
                 onClick={() => setSortOldest(!sortOldest)}
               >
-                <span>{sortOldest ? "Oldest first" : "Recently added"}</span>
+                <span>{sortOldest ? 'Oldest first' : 'Recently added'}</span>
                 <Icon name="chevron" />
               </button>
             </div>
@@ -157,13 +172,13 @@ export default function AssetLibrary() {
                       </span>
                       <div className="asset-actions">
                         <button
-                          className={`asset-action ${favorites.includes(asset.id) ? "liked" : ""}`}
+                          className={`asset-action ${favorites.includes(asset.id) ? 'liked' : ''}`}
                           onClick={(event) => {
                             event.stopPropagation();
                             setFavorites((current) =>
                               current.includes(asset.id)
                                 ? current.filter((id) => id !== asset.id)
-                                : [...current, asset.id],
+                                : [...current, asset.id]
                             );
                           }}
                           aria-label={`Like ${asset.title}`}
@@ -199,8 +214,8 @@ export default function AssetLibrary() {
               <button
                 className="clear-button"
                 onClick={() => {
-                  setQuery("");
-                  setCategory("All creations");
+                  setQuery('');
+                  setCategory('All creations');
                 }}
               >
                 Clear filters
@@ -212,7 +227,6 @@ export default function AssetLibrary() {
           <span>
             Showing <b>{filtered.length}</b> of {assets.length || 48} creations
           </span>
-          <span className="mono">IMAGINE LIBRARY · v1.0</span>
         </footer>
       </main>
     </div>
